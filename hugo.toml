@@ -4,13 +4,14 @@ title = "ptr's Blog"
 theme = 'hugo-theme-reimu'
 
 defaultContentLanguage = 'ja'
+defaultContentLanguageInSubdir = false
 [languages]
 [languages.en]
 languageName = 'English'
-weight = 1
+weight = 2
 [languages.zh-TW]
 languageName = '繁體中文'
-weight = 1
+weight = 3
 hasCJKLanguage = true
 [languages.ja]
 languageName = '日本語'
