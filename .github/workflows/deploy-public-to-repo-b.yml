@@ -33,7 +33,7 @@ jobs:
         env:
           REPO_B_PAT: ${{ secrets.REPO_B_PAT }}
         run: |
-          set -e
+          set -euxo pipefail
 
           TARGET_REPO="https://x-access-token:${REPO_B_PAT}@github.com/ptr0230/ptr0230.github.io.git"
 
@@ -49,11 +49,14 @@ jobs:
 
           cd /tmp/repo-b
 
-          if git diff --quiet && git diff --cached --quiet; then
+          git checkout -B main
+
+          git add -A
+
+          if git diff --cached --quiet; then
             echo "No changes to deploy."
             exit 0
           fi
 
-          git add .
           git commit -m "Deploy from source repo"
           git push origin main
