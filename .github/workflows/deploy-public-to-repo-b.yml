@@ -1,0 +1,59 @@
+name: Build Hugo and publish public/ to Repo B
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Publish public/ to Repo B
+        env:
+          REPO_B_PAT: ${{ secrets.REPO_B_PAT }}
+        run: |
+          set -e
+
+          TARGET_REPO="https://x-access-token:${REPO_B_PAT}@github.com/ptr0230/prt0230.github.io.git"
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          rm -rf /tmp/repo-b
+          git clone "$TARGET_REPO" /tmp/repo-b
+
+          rsync -av --delete \
+            --exclude ".git" \
+            public/ /tmp/repo-b/
+
+          cd /tmp/repo-b
+
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes to deploy."
+            exit 0
+          fi
+
+          git add .
+          git commit -m "Deploy from source repo"
+          git push origin main
