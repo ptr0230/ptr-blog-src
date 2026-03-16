@@ -116,7 +116,7 @@ footer:
 # Sidebar
 # sidebar: right # deprecated, use sidebar.position instead
 sidebar:
-  position: right
+  position: left
   menu: true  # whether to show the sidebar menu button, ignored on mobile devices
   article:
     show_common: true # whether to show common sidebar, ignored on mobile devices
@@ -625,7 +625,7 @@ injector:
 
 # Experimental, may have a lot of bugs, open with caution!
 pjax:
-  enable: false
+  enable: true
 
 # Experimental
 # https://github.com/GoogleChromeLabs/quicklink
