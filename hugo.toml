@@ -1,9 +1,9 @@
 baseURL = 'https://example.org/'
-languageCode = 'zh-TW'
+languageCode = 'ja-JP'
 title = "ptr's Blog"
 theme = 'hugo-theme-reimu'
 
-defaultContentLanguage = 'zh-TW'
+defaultContentLanguage = 'ja'
 [languages]
 [languages.en]
 languageName = 'English'
