@@ -1,21 +1,22 @@
-# hugo-reimu-template
+# Codex Hugo Reimu Customization Pack
 
-<img alt="theme version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FD-Sketon%2Fhugo-theme-reimu%2Frefs%2Fheads%2Fmain%2Fpackage.json&query=%24.version&label=theme">
+Files included:
+- `AGENTS.md` — repository-level instructions for Codex
+- `CODEX_TASK_PROMPT.md` — ready-to-paste task prompt
+- `OSHI_THEME_SPEC.md` — fill-in specification for your oshi theme
+- `PREP_CHECKLIST.md` — what you need to prepare and what to do
 
-Template for [hugo-theme-reimu](https://github.com/D-Sketon/hugo-theme-reimu)
+## Suggested usage order
+1. Clone `hugo-reimu-template`.
+2. Copy these files into the repository root.
+3. Fill in `OSHI_THEME_SPEC.md`.
+4. Add your avatar / banner / favicon / cover images.
+5. Run Codex with the prompt in `CODEX_TASK_PROMPT.md`.
+6. Review the diff and preview the site with Hugo.
 
-## Usage
 
-```bash
-git clone https://github.com/D-Sketon/hugo-reimu-template --recursive
-cd hugo-reimu-template
-hugo serve
-```
-
-## How to use
-
-- Change your site configuration in `hugo.toml`
-- Change your theme configuration in `config/_default/params.yml`
-- Change your post cover in `data/covers.yml`
-- Change your avatar in `static/avatar/avatar.webp`
-- Add your posts in `content/post`
+## Personalized draft included
+This personalized package also includes:
+- `NEXT_STEPS.md` — user-specific remaining decisions
+- updated `OSHI_THEME_SPEC.md`
+- updated `CODEX_TASK_PROMPT.md`

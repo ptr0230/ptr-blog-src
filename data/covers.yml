@@ -1,1 +1,8 @@
-- https://d-sketon.top/img/_backwebp/bg1.webp
+# 封面池（初稿）
+# 可混用本地檔案（static/ 下相對路徑）與外部 URL。
+# TODO: 建議補滿 6-12 張千燈ゆうひ主題封面。
+
+- images/banner.webp
+# - images/covers/uhi-01.webp
+# - images/covers/uhi-02.webp
+# - https://example.com/your-cover.webp

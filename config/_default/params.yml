@@ -26,10 +26,11 @@ monthFormat: "2006-01"
 dateFormat: "2006-01-02"
 timeFormat: "2006-01-02 15:04:05"
 
-author: D-Sketon
-email: xxx@example.com
-description: "少女祈祷中..."
-# subtitle: "少女祈祷中..."
+author: ptr
+email:
+title: "ptr's Blog"
+description: "ptr。"
+# TODO: 若要公開聯絡信箱，請填入 email。
 subtitle:
   typing:
     enable: false
@@ -47,7 +48,7 @@ subtitle:
     showCursor: true            # 是否显示闪烁的字符
     cursorChar: "|"             # 字符
     smartBackspace: false       # 智能退格，只删除不同的部分
-  text: "少女祈祷中..."        # 当 typing.enable = false 时使用
+  text: "🫠"        # 当 typing.enable = false 时使用
 
 banner: "images/banner.webp"
 # You can also write it in the form of the following url
@@ -55,7 +56,7 @@ banner: "images/banner.webp"
 
 # If you want to use the srcset attribute, please enable it
 banner_srcset:
-  enable: false
+  enable: true
   srcset:
     - src: "images/banner-600w.webp"
       media: "(max-width: 479px)"
@@ -64,7 +65,7 @@ banner_srcset:
     - src: "images/banner.webp"
       media: "(min-width: 800px)"
 
-avatar: "avatar.webp"
+avatar: "avatar.webp" # 對應 static/avatar/avatar.webp
 
 # Control the display of the post cover
 # If not set, the banner image will be displayed by default
@@ -93,7 +94,8 @@ excerpt_link: Read More
 # Footer copyright
 # Inject code snippet right in the footer copyright
 # Make sure your code snippet is safeHTML
-copyright:
+copyright: |-
+  <div>© 2026 🫠 ptr</div>
 # Need help choosing? Please see...
 # https://creativecommons.org/choose/
 # https://choosealicense.com/
@@ -102,13 +104,13 @@ copyright:
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></div>
 
 footer:
-  since: 2020 # 2020-current year
+  since: 2026 # 2020-current year
   powered: true
   count: true
   busuanzi: true
   icon:
-    url: "../images/taichi.png" # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
-    rotate: true
+    url: false
+    rotate: false
     mask: true # whether to use the images as a mask
 
 # Sidebar
@@ -120,6 +122,8 @@ sidebar:
     show_common: true # whether to show common sidebar, ignored on mobile devices
 
 social:
+  github: https://github.com/ptr0230
+  twitter: https://x.com/ptr0230
   # email: mailto:xxx@gmail.com
   # github: https://github.com/yourname
   # google: https://plus.google.com/yourname
@@ -211,9 +215,9 @@ anchor_icon: # default use '#' icon, you can use a hexadecimal representation of
 reimu_cursor:
   enable: true
   cursor:
-    default: ../images/cursor/reimu-cursor-default.png  # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
-    pointer: ../images/cursor/reimu-cursor-pointer.png
-    text: ../images/cursor/reimu-cursor-text.png
+    default: ../images/cursor/yuuhi-default.png  # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
+    pointer: ../images/cursor/yuuhi-pointer.png
+    text: ../images/cursor/yuuhi-text.png
 
 icon_font: 4552607_4k4bc36ef96
 
@@ -234,7 +238,7 @@ font:
   enable: true
   article:
     - Mulish
-    - Noto Serif SC
+    - Zen Maru Gothic
   code:
     # - Ubuntu Mono
     # - Source Code Pro
@@ -244,8 +248,9 @@ font:
 local_font:
   article:
     - "-apple-system"
-    - PingFang SC
-    - Microsoft YaHei
+    - Zen Maru Gothic
+    - Noto Sans TC
+    - Microsoft JhengHei
     - sans-serif
   code:
     - Menlo
@@ -348,7 +353,7 @@ comment:
     zh-TW: 說些什麼吧！
     ja: コメントを残す
     pt-BR: Deixe um comentário
-  default: waline # default comment system, when you enable multiple comment systems
+  default: giscus # default comment system, when you enable multiple comment systems
 
 # valine comment system. https://valine.js.org
 # version 1.5.1
@@ -410,11 +415,11 @@ gitalk:
 # https://giscus.app/zh-CN
 giscus:
   enable: false
-  repo:
-  repoId:
-  category:
-  categoryId:
-  mapping: mapping
+  repo: # TODO: 例如 ptr0230/<repo>
+  repoId: # TODO: 從 giscus 取得
+  category: # TODO: 例如 General
+  categoryId: # TODO: 從 giscus 取得
+  mapping: pathname
   strict: 0
   reactionsEnabled: 1
   emitMetadata: 0
@@ -454,10 +459,10 @@ algolia_search:
 preloader:
   enable: true
   text: 
-    zh-CN: 少女祈祷中...
-    zh-TW: 少女祈禱中...
-    en: Loading...
-    ja: 少女祈祷中...
+    zh-CN: 秘技：入れ替え
+    zh-TW: 秘技：入れ替え
+    en: 秘技：入れ替え
+    ja: 秘技：入れ替え
     pt-BR: Carregando...
   icon: # default use inline svg for fast speed, you can use a image url, like '/images/taichi.png'
   rotate: true # whether to rotate the icon
@@ -490,7 +495,7 @@ animation:
 
 # see https://github.com/D-Sketon/mouse-firework
 firework:
-  enable: true
+  enable: false
   disable_on_mobile: false
   options:
     excludeElements: ["a", "button"]
@@ -536,8 +541,8 @@ top:
   enable: true
   position: right # left or right
   icon:
-    url: "../images/taichi.png" # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
-    rotate: true
+    url: false
+    rotate: false
     mask: true # whether to use the images as a mask
 
 # whether to display the notification when the article is outdated
@@ -607,7 +612,12 @@ home_categories:
 # Make sure your code snippet is safeHTML
 injector:
   head_begin: # Inject code snippet right after <head>
-  head_end: # Inject code snippet right before </head>
+  head_end: |-
+    <style>
+      #footer-info > div:nth-of-type(2) {
+        display: none;
+      }
+    </style>
   body_begin: # Inject code snippet right after <body>
   body_end: # Inject code snippet right before </body>
   sidebar_begin: # Inject code snippet right after <aside>
@@ -701,16 +711,16 @@ material_theme:
 
 internal_theme:
   light:
-    --red-0: '#ff0000'
-    --red-1: '#ff5252'
-    --red-2: '#ff7c7c'
-    --red-3: '#ffafaf'
-    --red-4: '#ffd0d0'
-    --red-5: '#ffecec'
-    --red-5-5: '#fff3f3'
-    --red-6: '#fff7f7'
-    --color-red-6-shadow: 'rgba(255, 78, 78, 0.6)'
-    --color-red-3-shadow: 'rgba(255, 78, 78, 0.3)'
+    --red-0: '#ED784A'
+    --red-1: '#F08D66'
+    --red-2: '#F3A987'
+    --red-3: '#F7C6AB'
+    --red-4: '#FBE2D0'
+    --red-5: '#FDF0E7'
+    --red-5-5: '#FEF6F1'
+    --red-6: '#FFFAF7'
+    --color-red-6-shadow: 'rgba(237, 120, 74, 0.55)'
+    --color-red-3-shadow: 'rgba(237, 120, 74, 0.28)'
 
     --highlight-nav: "#f5f5f5"
     --highlight-scrollbar: "#d6d6d6"
@@ -730,10 +740,10 @@ internal_theme:
     --highlight-addition: "#22863a"
     --highlight-addition-bg: "#f0fff4"
   dark:
-    --red-4: 'rgba(255, 208, 208, 0.5)'
-    --red-5: 'rgba(255,228,228,0.15)'
-    --red-5-5: 'rgba(255,236,236,0.05)'
-    --red-6: 'rgba(255, 243, 243, 0.2)'
+    --red-4: 'rgba(251, 226, 208, 0.5)'
+    --red-5: 'rgba(253, 240, 231, 0.16)'
+    --red-5-5: 'rgba(253, 240, 231, 0.08)'
+    --red-6: 'rgba(255, 250, 247, 0.22)'
 
     --highlight-nav: "#222830"
     --highlight-scrollbar: "#454d59"

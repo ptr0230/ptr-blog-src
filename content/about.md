@@ -1,9 +1,18 @@
 ---
-title: 关于
-description: 关于
+title: 關於
+description: 關於
 
 date: 2022-06-09T20:12:52+08:00
 lastmod: 2022-06-09T20:12:52+08:00
 ---
 
-A Hakurei Reimu style Hugo theme. Migrated from [hexo-theme-reimu](https://github.com/D-Sketon/hexo-theme-reimu).
+這是 ptr 的千燈ゆうひ主題個人部落格初稿 🫠。
+
+目前會放：
+- 文章
+- 推活記錄
+- 個人整理筆記
+
+TODO:
+- 補上正式自我介紹
+- 補上 fandom/source 說明
